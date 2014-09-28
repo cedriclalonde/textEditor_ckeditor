@@ -1,0 +1,14 @@
+#btn{
+    position: absolute;
+    bottom: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+#cke_editor1{
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    top: 40px;
+}

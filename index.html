@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A Simple Page with CKEditor</title>
+    <!-- Make sure the path to CKEditor is correct. -->
+    <script src="//cdn.ckeditor.com/4.4.5/basic/ckeditor.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+<form>
+    <textarea name="editor1" id="editor1" rows="10" cols="80">
+        Entrer votre textes ici.
+    </textarea>
+    <script>
+        // Replace the <textarea id="editor1"> with a CKEditor
+        // instance, using default configuration.
+        CKEDITOR.replace( 'editor1' );
+
+
+
+
+
+        $(function(){
+            $('#btn').on('click', function(e){
+                var objEditor = CKEDITOR.instances["editor1"];
+                var q = objEditor.getData();
+                console.log(q);
+            });
+        });
+
+
+    </script>
+</form>
+
+<div id="btn"></div>
+
+</body>
+</html>
